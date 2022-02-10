@@ -1,6 +1,7 @@
 package version1
 
 import (
+	"net"
 	"strings"
 	"text/template"
 )
@@ -16,4 +17,5 @@ func trim(s string) string {
 var helperFunctions = template.FuncMap{
 	"split": split,
 	"trim":  trim,
+	"joinHostPort": net.JoinHostPort,
 }
